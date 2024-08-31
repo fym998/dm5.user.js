@@ -8,7 +8,7 @@ This is a userscript initiated from [@violentmonkey/generator-userscript](https:
 
 ## Development
 
-``` sh
+```sh
 # Compile and watch
 $ pnpm run dev
 

@@ -5,7 +5,7 @@ import pkg from './package.json' with { type: 'json' };
 
 export default defineConfig(
   Object.entries({
-    'dm5': 'src/dm5/index.ts',
+    dm5: 'src/dm5/index.ts',
   }).map(([name, entry]) => ({
     input: entry,
     plugins: [

@@ -25,17 +25,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 }
 
 .rightToolBar {
-  opacity: .6;
+  opacity: 0.6;
   display: flex;
 
-  &>a {
+  & > a {
     float: unset;
     display: flex !important;
     font-weight: bold;
     align-items: center;
   }
 
-  &>a.logo_3 {
+  & > a.logo_3 {
     display: none;
   }
 }

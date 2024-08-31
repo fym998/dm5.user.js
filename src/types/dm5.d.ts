@@ -42,4 +42,9 @@ declare const DM5_READMODEL: number;
 declare const DM5_CURRENTFOCUS: number;
 declare const DM5_VIEWSIGN: string;
 declare const DM5_VIEWSIGN_DT: string;
-declare function SetReadHistory(cid: typeof DM5_CID, mid: typeof DM5_MID, p: typeof DM5_PAGE, uid: typeof DM5_USERID);
+declare function SetReadHistory(
+  cid: typeof DM5_CID,
+  mid: typeof DM5_MID,
+  p: typeof DM5_PAGE,
+  uid: typeof DM5_USERID,
+);
