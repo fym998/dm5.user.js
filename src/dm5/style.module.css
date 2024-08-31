@@ -1,0 +1,21 @@
+/* Preflights are needed for default values of variables */
+/* @unocss preflights; */
+
+.imageflow {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &>img {
+    display: block;
+    margin: .5em .25em;
+    min-height: 30vh;
+    min-width: 30vw;
+    cursor: pointer;
+    flex-shrink: 1;
+    max-width: 100%;
+    border: 1px solid;
+  }
+}

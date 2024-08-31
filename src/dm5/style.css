@@ -1,0 +1,26 @@
+/* global css */
+/* Note: might conflict with existing styles if not in shadow DOM */
+
+.view-paging {
+  display: none;
+}
+
+.rightToolBar {
+  opacity: .6;
+  display: flex;
+
+  &>a {
+    float: unset;
+    display: flex !important;
+    font-weight: bold;
+    align-items: center;
+  }
+
+  &>a.logo_3 {
+    display: none;
+  }
+}
+
+#cp_image {
+  display: none !important;
+}
