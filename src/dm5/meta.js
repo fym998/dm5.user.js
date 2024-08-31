@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        DM5 动漫屋滚动阅读
 // @namespace   https://github.com/fym998/
-// @description DM5 动漫屋滚动阅读，一次展示所有图片，点击图片切换至下一页。
+// @description DM5 动漫屋滚动阅读，展示章节内的所有图片。如果空间允许，会将图片从右到左排列。点击图片切换至下一张。
 // @run-at      document-end
 // @match       *://www.dm5.com/m*/
 // @match       *://www.dm5.cn/m*/
