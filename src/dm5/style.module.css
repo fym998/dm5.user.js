@@ -32,9 +32,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     margin: 0.5em 0.25em;
     min-height: 30vh;
     min-width: 30vw;
-    cursor: pointer;
     flex-shrink: 1;
     max-width: 100%;
     border: 1px solid;
+  }
+
+  & > img:not(:last-child) {
+    cursor: pointer;
   }
 }

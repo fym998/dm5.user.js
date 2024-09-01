@@ -74,6 +74,7 @@ function goToPage(index: number) {
 
 const ImageFlow = () => {
   const [imageURLs] = createResource(fetchImageURLs);
+  const imageCount = DM5_IMAGE_COUNT;
   const [currentPage, setCurrentPage] = createSignal(DM5_PAGE);
 
   createEffect(() => {
@@ -91,7 +92,9 @@ const ImageFlow = () => {
             <img
               id={`ipg${i()}`}
               src={URL}
-              onClick={() => setCurrentPage(i() + 1)}
+              onClick={() => {
+                if (i() < imageCount) setCurrentPage(i() + 1);
+              }}
               onLoad={() => {
                 if (currentPage() === i()) goToPage(i());
               }}
@@ -106,11 +109,16 @@ const ImageFlow = () => {
   );
 };
 
-const container = document.querySelector('#cp_img');
+const container = document.querySelector('#cp_img, #barChapter');
 container.removeAttribute('oncontextmenu');
 container.parentElement.removeAttribute('oncontextmenu');
-render(ImageFlow, container);
-
+if (container.id === 'cp_img') {
+  render(ImageFlow, container);
+} else if (container.id === 'barChapter') {
+  container.querySelectorAll('img').forEach((img) => {
+    img.removeAttribute('onclick');
+  });
+}
 document.querySelector('footer').style.display = 'none';
 
 const backAnchorHTML = `
@@ -121,7 +129,5 @@ document
   .querySelector('.rightToolBar')
   .insertAdjacentHTML('afterbegin', backAnchorHTML);
 
-const meta = document.createElement('meta');
-meta.name = 'viewport';
-meta.content = 'width=device-width, initial-scale=1';
-document.head.appendChild(meta);
+const metaViewPointHTML = `<meta name="viewport" content="width=device-width, initial-scale=1">`;
+document.head.insertAdjacentHTML('afterbegin', metaViewPointHTML);
